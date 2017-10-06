@@ -62,7 +62,7 @@
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
+                    <li>
                         <a href="dashboard.html">Dashboard</a>
                     </li>
                     <li>
@@ -71,7 +71,7 @@
                     <!-- <li> -->
                         <!-- <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a> -->
                     <!-- </li> -->
-                    <li>
+                    <li class="active">
                         <a href="pension.html">Pension&nbsp;Scheduler</a>
                     </li>
                     <li>
@@ -101,7 +101,21 @@
 
                 <!-- Page Heading -->
                 <div class="row">
-                    <div class="col-sm-2">
+                   <div class="col-sm-4 text-center"><strong class="pull-left">Payment for the month/Quarter of </strong></div>
+                    <div class="col-sm-4"><input type="text" class="datepicker form-control" id="datepicker" placeholder="From Date"></div>
+                    <div class="col-sm-4">
+                    	<select class="form-control">
+                    		<option selected="selected">Share Type</option>
+                    	</select>
+                    </div>
+                  
+                </div>
+                <br>
+                <div class="row">
+                	<div class="col-sm-4 text-center">
+                		<strong class="pull-left">Select District & Block</strong>
+                	</div>
+                	 <div class="col-sm-4">
                         <select class="form-control"><option selected="selected">Select District</option>
                         <option>Beguserai</option>
                         <option>Madhepura</option>
@@ -109,54 +123,132 @@
                         <option>Patna</option>
                         </select>
                     </div>
-                    <div class="col-sm-2"><select class="form-control"><option selected="selected">Select Block</option>
+                    <div class="col-sm-4"><select class="form-control"><option selected="selected">Select Block</option>
                     <option>Madhaili</option>
                     <option>Shankarpur</option>
                     <option>Rampur</option>
                     <option>Mathai</option>
                     </select></div>
-                    <div class="col-sm-2"><input type="text" class="datepicker form-control" id="datepicker" placeholder="From Date"></div>
-                    <div class="col-sm-2"><input type="text" class="datepicker form-control" placeholder="To Date">
-                    
-                    </div>
-                    <div class="col-sm-2"><button type="button" class="go btn btn-primary" id="go" >Go </button></div>
                 </div>
+                <br>
                  <div class="row">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3"></div>
+                    <div class="col-sm-4"><strong class="pull-left">Select Scheme</strong></div>
+                    <div class="col-sm-4">
+                    	<select class="form-control">
+                    		<option selected="selected">Select Scheme</option>
+                    	</select>
+                    </div>
+                      <div class="col-sm-2"><button type="button" class="go btn btn-primary" id="go" >Go </button></div>
+                    <!-- <div class="col-sm-4"></div> -->
+                    <!-- <div class="col-sm-3"></div> -->
                 </div>
                 <span style="display: none;" id="table">
                 <div class="row" >
                     <div class="col-sm-12">
-                        <table class="table" id="actual_table">
+                          <table class="table" id="actual_table">
                             <thead>
                                 <tr>
                                     <th class='text-center'>S.No</th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
-                                    <th class='text-center'></th>
+                                    <th class='text-center'>Beneficiary&nbsp;Name</th>
+                                    <th class='text-center'>District</th>
+                                    <th class='text-center'>Mobile&nbsp;<input type="checkbox" class="form-control">.</th>
+                                    <th class='text-center'>Bank&nbsp;Account&nbsp;<input type="checkbox" class="form-control">.</th>
+                                    <th class='text-center'>IFSC</th>
+                                    <th class='text-center'>Amount</th>
+                                    <th class='text-center'>Select</th>
+                                   <!--  <th class='text-center'>Block</th>
+                                    <th class='text-center'>Fathers&nbsp;Name</th>
+                                    <th class='text-center'>Adhaar&nbsp;<input type="checkbox" class="form-control">.</th>
+                                    <th class='text-center'>Date&nbsp;of&nbsp;Birth</th>
+                                    <th class='text-center'>Physically&nbsp;Challenged</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class='text-center'>1.</td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
-                                    <td class='text-center'></td>
+                                    <td class='text-center'>Ram Sharan</td>
+                                    <td class='text-center'>Patna</td>
+                                    <td class='text-center'>8989898989</td>
+                                    <td class='text-center'>532125185691</td>
+                                    <td class='text-center'>SBI01234444</td>
+                                    <!-- <td class='text-center'>Ashiana</td>
+                                    <td class='text-center'>Mahesh&nbsp;Sharan</td>
+                                    <td class='text-center'>501243526745</td> -->
+                                    <td class='text-center'>23,984</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class='text-center'>2.</td>
+                                    <td class='text-center'>Madhur Bhaskar</td>
+                                    <td class='text-center'>Madhepura</td>
+                                    <td class='text-center'>9842561736</td>
+                                    <td class='text-center'>657634987678</td>
+                                    <td class='text-center'>PNB01234534</td>
+                                  <!--   <td class='text-center'>Naurangpur</td>
+                                    <td class='text-center'>Naren&nbsp;Bhaskar</td>
+                                    <td class='text-center'>786438910287</td> -->
+                                    <td class='text-center'>11,964</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class='text-center'>3.</td>
+                                    <td class='text-center'>Shiv Mahato</td>
+                                    <td class='text-center'>Patna</td>
+                                    <td class='text-center'>8767546239</td>
+                                    <td class='text-center'>532165437812</td>
+                                    <td class='text-center'>IDB01236544</td>
+                                <!--     <td class='text-center'>Digha</td>
+                                    <td class='text-center'>Sanjeev&nbsp;Mahato</td>
+                                    <td class='text-center'>672184390123</td>
+ -->                                    <td class='text-center'>1,974</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class='text-center'>4.</td>
+                                    <td class='text-center'>Vineet Kumar</td>
+                                    <td class='text-center'>Saharsa</td>
+                                    <td class='text-center'>8989898989</td>
+                                    <td class='text-center'>532125185691</td>
+                                    <td class='text-center'>SBI01234674</td>
+                                   <!--  <td class='text-center'>Rampur</td>
+                                    <td class='text-center'>Vinod&nbsp;Kumar&nbsp;Gupta</td>
+                                    <td class='text-center'>673421786524</td> -->
+                                    <td class='text-center'>304</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class='text-center'>5.</td>
+                                    <td class='text-center'>Prabhu Nandan</td>
+                                    <td class='text-center'>Madhepura</td>
+                                    <td class='text-center'>8768453210</td>
+                                    <td class='text-center'>000987645312</td>
+                                    <td class='text-center'>HDF01234562</td>
+                                 <!--    <td class='text-center'>Madhaili</td>
+                                    <td class='text-center'>Dinesh&nbsp;Nandan</td>
+                                    <td class='text-center'>908769005431</td> -->
+                                    <td class='text-center'>2,192</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class='text-center'>6.</td>
+                                    <td class='text-center'>Gurucharan Das</td>
+                                    <td class='text-center'>Patna</td>
+                                    <td class='text-center'>9011287654</td>
+                                    <td class='text-center'>000088761281</td>
+                                    <td class='text-center'>SBI08917238</td>
+                             <!--        <td class='text-center'>Patliputra</td>
+                                    <td class='text-center'>Mohan&nbsp;Das</td>
+                                    <td class='text-center'>673829109281</td> -->
+                                    <td class='text-center'>1,454</td>
+                                    <td class='text-center'><input type="checkbox" class="form-control"></td>
                                 </tr>
                             </tbody>
+
                         </table>
                     </div>
                 </div>
@@ -166,7 +258,7 @@
                         <input type="text" class="form-control" placeholder="Remarks">
                     </div>
                     <div class="col-sm-6">
-                        <button class="btn btn-primary pull-left">Next</button>
+                        <button class="btn btn-primary pull-left">Freeze for Payment</button>
                     </div>
                 </div>
                 </span>
