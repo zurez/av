@@ -22,10 +22,10 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css">
+      <link rel="stylesheet" type="text/css" href="css/datatable.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/datatable.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,14 +34,16 @@
     <![endif]-->
     <style type="text/css">
         
-        .active{
-            background-color: #0071A7 !important;
+       
+        .canvas{
+            height: 250px !important;
+            /*widows: 100% !important;*/
         }
-        .yolo > *{
-            background:#424242 !important;
+        a{
+            color: white !important;
         }
-        .datepicker{
-            color: black;
+        .btn btn-default btn-warning{
+            font-size: 2em;
         }
     </style>
 
@@ -52,7 +54,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #C9283E !important;height: 50px;color: white !important;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #808080 !important;height: 70px;color: white !important;">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -61,32 +63,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-          <!--       <a class="navbar-brand pull-right" href="index.html"><img src="img/logo.jpg" class="img-responsive" style="height:50px;width: 50px;margin-top: -15px;"></a> -->
-
+          
+                <a class="navbar-brand" href="index.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;"></a>
                
 
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-left top-nav" >
+            <ul class="nav navbar-left top-nav pull-right" style="margin-top: 10px;margin-right: 10px;">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Home</a>
                    
                 </li>
             
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schema Details</a>
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Schema Details</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Directory</a>
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Directory</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help</a>
+                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Help</a>
                 </li>
+
             </ul>
+
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #C9283E !important;color: white !important;">
-                <ul class="nav navbar-nav side-nav" style="background-color: #C9283E !important;margin-top:-1px !important;color: white !important;">
-                    <li class="active">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #808080 !important;color: white !important;">
+                <ul class="nav navbar-nav side-nav" style="background-color: #808080 !important;margin-top:-1px !important;color: white !important;">
+                    <li >
                         <a href="dashboard.html">Dashboard</a>
                     </li>
                     <li>
@@ -95,11 +99,11 @@
                     <!-- <li> -->
                         <!-- <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a> -->
                     <!-- </li> -->
-                    <li>
+                    <li class="active">
                         <a href="pension.html">Pension&nbsp;Scheduler</a>
                     </li>
                     <li>
-                        <a href="payment.html">Payment&nsbp;Folder</a>
+                        <a href="payment.html">Payment Folder</a>
                     </li>
                     <li>
                         <a href="reports.html">Reports</a>
@@ -119,10 +123,9 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+         <div class="container-fluid">
 
                 <!-- Page Heading -->
                 <div class="row">
@@ -281,13 +284,7 @@
                 </span>
             </div>
             <!-- /.container-fluid -->
-            <!-- Padder -->
-            <div class="row padder" >
-                <div class="col-sm-12" style="height:500px !important;">
-                    &nbsp;
-                </div>
-                
-            </div>
+
         </div>
         <!-- /#page-wrapper -->
 
@@ -296,25 +293,140 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/datatable.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
     <!-- Morris Charts JavaScript -->
-  <!--   <script src="js/plugins/morris/raphael.min.js"></script>
+<!--     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script> -->
+   <!--  
     <script type="text/javascript">
+        Morris.Donut({
+          element: 'donut',
+          data: [
+            {label: "Expense", value: 12},
+            {label: "Expense2", value: 30},
+            {label: "Expense3", value: 20}
+          ],
+          colors:["#800000","#FFFF00","#FF0000"]
+        });
+        Morris.Bar({
+      element: 'bar',
+      data: [
+        { y: '2006', a: 100, b: 90 },
+        { y: '2007', a: 75,  b: 65 },
+        { y: '2008', a: 50,  b: 40 },
+        { y: '2009', a: 75,  b: 65 },
+        { y: '2010', a: 50,  b: 40 },
+        { y: '2011', a: 75,  b: 65 },
+        { y: '2012', a: 100, b: 90 }
+      ],
+      xkey: 'y',
+      ykeys: ['a'],
+      axes:true,
+      grid:false,
+      stacked:true,
+      labels: ['Series A', 'Series B']
+    });
+    </script> -->
+        <script type="text/javascript">
         $(document).ready(function(){
             $('#actual_table').DataTable();
             $('.go').click(function(){
+
                 $('#table').show();
+
                
             });
              $( ".datepicker" ).datepicker();
         });
+    </script>
+    <script type="text/javascript" src="js/chart.js"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script>
+    var ctx = document.getElementById("bar").getContext('2d');
+    var pie = document.getElementById("pie").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 10
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var pie_config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                ],
+                backgroundColor: [
+    'rgb(255, 99, 132)',
+    'rgb(255, 159, 64)',
+    'rgb(255, 205, 86)',
+    'rgb(75, 192, 192)',
+    'rgb(54, 162, 235)',
+    'rgb(153, 102, 255)',
+    'rgb(201, 203, 207)'
+                ],
+                label: 'Dataset 1'
+            }],
+            labels: [
+                "Red",
+                "Orange",
+                "Yellow",
+                "Green",
+                "Blue"
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    };
+    // var pu = document.getElementById("pie").getContext("2d");
+    myPie = new Chart(pie, pie_config);
     </script>
 </body>
 
