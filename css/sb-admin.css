@@ -25,7 +25,7 @@ body {
     width: 100%;
     padding: 0;
     background-color: #fff;
-    margin-top:50px;
+    /*margin-top:50px;*/
 }
 
 .huge {
@@ -46,7 +46,7 @@ body {
 /* Top Navigation */
 
 .top-nav {
-    padding: 0 15px;
+    /*padding: 0 15px;*/
 }
 
 .top-nav>li {
@@ -116,7 +116,7 @@ ul.alert-dropdown {
 @media(min-width:768px) {
     .side-nav {
         position: fixed;
-        top: 51px;
+        top: 82px;
         left: 225px;
         width: 225px;
         margin-left: -225px;

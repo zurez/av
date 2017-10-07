@@ -38,12 +38,12 @@
         }
         .canvas{
             height: 250px !important;
-            /*widows: 100% !important;*/
+            widows: 100% !important;
         }
         a{
             color: white !important;
         }
-        .btn btn-default btn-warning{
+        .dropdown-toggle{
             font-size: 2em;
         }
     </style>
@@ -55,7 +55,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #808080 !important;height: 70px;color: white !important;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #C9283E !important;height: 50px;color: white !important;">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -65,32 +65,34 @@
                     <span class="icon-bar"></span>
                 </button>
           
-                <a class="navbar-brand" href="index.html"><img src="img/top-welfare.gif" class="img-responsive" style="height:70px;margin-top:-10px;"></a>
+               
                
 
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-left top-nav pull-right" style="margin-top: 10px;margin-right: 10px;">
+            <ul class="nav navbar-left top-nav" >
                 <li class="dropdown">
-                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Home</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
                    
                 </li>
             
                 <li class="dropdown">
-                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Schema Details</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schema Details</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Directory</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Directory</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="btn btn-default btn-warning btn-lg" style="margin: 10px;">Help</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help</a>
                 </li>
-
+                <li class="dropdown">
+                     <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" class="img-responsive" style="height:50px; width: 50px;"></a>
+                </li>
             </ul>
 
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #808080 !important;color: white !important;">
-                <ul class="nav navbar-nav side-nav" style="background-color: #808080 !important;margin-top:-1px !important;color: white !important;">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" style="background-color: #C9283E !important;color: white !important;">
+                <ul class="nav navbar-nav side-nav" style="background-color: #C9283E !important;margin-top:-1px !important;color: white !important;">
                     <li class="active">
                         <a href="dashboard.html">Dashboard</a>
                     </li>
@@ -127,7 +129,6 @@
         <div id="page-wrapper">
 
             <div class="container-fluid">
-                <br>
                     <div class="row">
                         <div class="col-sm-12">
                             <img src="img/dash1.png" class="img-responsive" style="width:100%;">
@@ -141,7 +142,7 @@
                         <div class="col-sm-4">
                              <canvas id="pie" class="canvas"></canvas>
                         </div>
-                        <div class="col-sm-4" style="border: 1px solid black;padding:5px;">
+                        <div class="col-sm-4" style="border: 1px solid black;padding: 5px;">
                             <select class="form-control" ><option selected="selected">Select District</option>
                             <option>Beguserai</option>
                             <option>Madhepura</option>
@@ -156,12 +157,12 @@
                             </select><br>
                             <input type="text" class="datepicker form-control" placeholder="From Date"><br>
                             <input type="text" class="datepicker form-control" placeholder="To Date"><br>
-                            <a href="reports.html" class="btn btn-primary btn-block">Go</a>
+                            <a href="report.html" class="btn btn-primary btn-block">Go</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <img src="img/dash4.png" class="img-responsive" style="width:600px; ;height:250px;">
+                            <img src="img/dash4.png" class="img-responsive" style="width:100% ;height:250px;">
                         </div>
                     </div>
 
